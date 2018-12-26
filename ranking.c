@@ -54,7 +54,7 @@ int main()
           leer_msg(msgqueue_id,tipo,&qbuffer); 
           printf("Tipo: %ld Texto:%s \n",qbuffer.mtype,qbuffer.mtext);
           printf("Leyendo tiempo...\n"); 
-          tipo = 2;
+          tipo = 2; 
           leer_msg(msgqueue_id,tipo,&qbuffer2); 
           printf("Tipo: %ld Texto:%s \n",qbuffer2.mtype,qbuffer2.mtext);
 
