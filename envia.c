@@ -5,7 +5,7 @@
 #include <string.h> 
 #include <unistd.h>
 
-#define MAX_SEND_SIZE 15
+#define MAX_SEND_SIZE 16
 struct mymsgbuf{ 
    long mtype; 
    char mtext[MAX_SEND_SIZE]; 
@@ -52,7 +52,7 @@ int main()
        	 	strncpy(qbuffer.mtext,"jaime",MAX_SEND_SIZE-1);
         	qbuffer.mtext[MAX_SEND_SIZE-1]='\0';
 		escr_msg(msgqueue_id,&qbuffer);
-  sleep(1);
+  sleep(5);
   //enviamos el tiempo en segundos del jugador
     tipo = 2;
     printf("Enviando tipo 2...\n"); 
@@ -60,7 +60,7 @@ int main()
           strncpy(qbuffer2.mtext,"43.2",MAX_SEND_SIZE-1);
           qbuffer2.mtext[MAX_SEND_SIZE-1]='\0';
     escr_msg(msgqueue_id,&qbuffer2);
-    sleep(1);
+    sleep(5);
 
 
 	}
